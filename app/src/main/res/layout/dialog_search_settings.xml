@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView5" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sex"
+                android:id="@+id/gender_label"
+                android:layout_marginLeft="6dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_any"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_gender_any"
+                        android:checked="true"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_male"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_female"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_gender_secret"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_secret"
+                        android:layout_weight="1" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_sex_orientation"
+                android:id="@+id/sex_orientation_label"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="6dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_orientation_any"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_sex_orientation_any"
+                        android:checked="true"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_orientation_heterosexual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex_orientation_1"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_orientation_gay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex_orientation_2"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_orientation_lesbian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex_orientation_3"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/radio_sex_orientation_bisexual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sex_orientation_4"
+                        android:layout_weight="1" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_additional"
+                android:id="@+id/textView_additional"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="6dp" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_online"
+                android:id="@+id/checkbox_online"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_only_with_photo"
+                android:id="@+id/checkbox_photo"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_only_with_pro_mode"
+                android:id="@+id/checkbox_pro"
+                android:layout_gravity="center_horizontal" />
+
+            <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/label_only_moderated"
+                android:id="@+id/checkbox_moderation"
+                android:layout_gravity="center_horizontal" />
+
+            <ru.ifsoft.chat.view.RangeSeekBar
+                android:id="@+id/age_seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                rsb:absoluteMinValue="18"
+                rsb:absoluteMaxValue="105"
+                rsb:valuesAboveThumbs="true"
+                rsb:textAboveThumbsColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
